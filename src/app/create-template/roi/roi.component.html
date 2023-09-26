@@ -1,0 +1,103 @@
+<!-- <input type="file" (change)="loadImage($event)" /><br><br> -->
+<!-- <canvas #imageCanvas width="500" height="500" (mousedown)="startDrawing($event)" (mouseup)="stopDrawing($event)" (mousemove)="drawRectangle($event)"></canvas> -->
+
+<div fxLayout="column" class="dialog-container">
+    <!-- Ribbon Area -->
+    <div class="ribbon">
+        <input style="margin: 4px;" type="file" (change)="loadImage($event)" />
+
+        <button style="background-color: red; color: aliceblue;  border: none;margin: 0px 0px; height: 30px; float: right;" (click)="close()">Close</button>
+        <button style="background-color: rgba(1, 111, 246, 0.831); color: aliceblue; margin: 0px 0px 0px 0px; border: none; height: 30px; float: right;" (click)="save()">Save</button>
+        
+        <!-- <mat-icon style="background-color: red;  border: none;margin: 0px 0px; height: 30px; float: right;" (click)="close()">close</mat-icon>
+        <mat-icon style="background-color: rgb(50, 151, 218); margin: 0px 0px 0px 0px; border: none; height: 30px; float: right;" (click)="save()">save</mat-icon> -->
+
+        <mat-icon style="float: right; margin: 2px 50px 0px 0px;" (click)="zoomOut()">zoom_out</mat-icon>
+        <mat-icon style="float: right; margin: 2px 10px 0px 0px;" (click)="zoomIn()">zoom_in</mat-icon>
+    </div>
+
+    <div fxLayout="row" fxFlex>
+        <!-- Work Area -->
+        <div class="work-area" fxFlex>
+
+            <!-- <pdf-viewer [src]="pdfSrc"
+                    [render-text]="true"
+                    [original-size]="false"
+                    style="width: 400px; height: 500px"
+                    [show-all]="false"
+                    [page]="1"
+                   
+                    [render-text-mode]="0"
+                    >
+            </pdf-viewer> -->
+
+            <!-- <canvas [src]="pdfSrc"
+            [render-text]="true"
+            [original-size]="false"
+            style="width: 400px; height: 500px">
+
+            </canvas> -->
+
+            <!-- style="border:solid black 1px;" -->
+            <canvas #imageCanvas  
+                    [style.transform]="'translate(-0%, -0%) scale(' + zoomLevel + ')'"  
+                    (mousedown)="startDrawing($event)" 
+                    (mouseup)="stopDrawing($event)" 
+                    (mousemove)="drawRectangle($event)">
+            </canvas>
+
+
+            <!-- <input type="file" (change)="onFileSelected($event)" /> -->
+            <!-- <img *ngIf="isImage && fileSrc" [src]="fileSrc" alt="Image Preview" width="500px"> -->
+            <!-- <img *ngIf="isImage && fileSrc" [src]="fileSrc" alt="Uploaded File Preview" [style.transform]="'translate(-50%, -0%) scale(' + zoomLevel + ')'" style="max-width: 100%; height: 450px;"> -->
+        
+            <!-- <iframe *ngIf="isPDF && fileSrc" [src]="fileSrc" width="100%" height="500px"></iframe> -->
+            <!-- <img *ngIf="isPDF && fileSrc" [src]="fileSrc" alt="Uploaded File Preview" [style.transform]="'translate(-50%, -0%) scale(' + zoomLevel + ')'" style="max-width: 100%; height: 450px;"> -->
+            
+            <!-- <img *ngIf="imageCanvas" [src]="imageCanvas" alt="Uploaded File Preview" [style.transform]="'translate(-50%, -0%) scale(' + zoomLevel + ')'" style="max-width: 100%; height: 450px;"> --> 
+        
+        </div>
+
+        <!-- Right Panel -->
+        <div class="right-panel">
+            
+            <!-- <div> -->
+                <!-- <label for="fn">FieldName</label><br>
+                <input [(ngModel)]="boxGeometry">  -->
+                 
+            <!--<div #jsonOut></div>
+                <div>{{jsonOutValue}}</div> -->
+            <!-- </div> -->
+
+            
+            <!-- <div *ngFor="let label of labels; let i = index">
+                <label>{{ label }}</label><br>
+                <input [(ngModel)]="boxGeometry" type="text" [id]="'input' + i" [name]="'input' + i">
+            </div> -->
+
+            <!-- <div *ngFor="let label of labels; let i = index">
+                <label>{{ label }}</label><br>
+                <input [(ngModel)]="boxGeometry" 
+                       (click)="setSelectedInput(i)"
+                       
+                       type="text" [id]="'input' + i" [name]="'input' + i">
+            </div> -->
+
+
+
+            <div *ngFor="let label of labels; let i = index">
+                <label>{{ label }}</label><br>
+                <input [ngModel]="inputValues[i]"
+                       (ngModelChange)="inputValues[i] = $event" 
+                       (click)="setSelectedInput(i)"
+                       type="text" [id]="'input' + i" [name]="'input' + i">
+            </div><br>
+            
+            
+
+            
+            
+            <!-- [value]="i === selectedInputIndex ? boxGeometry : null" -->
+        </div>
+    </div>
+</div>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Template</title>
+</head>
+<body class="container">
+    <div class="templateForm">
+        <button class="Button" mat-raised-button color="primary" (click)="templateFormVisible = !templateFormVisible">Create Template</button>
+        <button class="Button" mat-raised-button color="primary" (click)="re()">RegEx</button>
+        <button class="Button" mat-raised-button color="primary" (click)="roi()">ROI</button><br><br>
+       
+        <mat-card class="input-container" *ngIf="templateFormVisible">
+            <!-- <div>
+            <label for="name">Document Name:</label>
+            <input type="text"  [(ngModel)]="documentTypeId" name="name" class="input-box">
+            <button class="docBtnAdd" id="documentButtonClicked" (click)="addDocument()">Add</button>
+            <Button class="docBtnDel" (click)="deleteDocument()" style="margin: 3px;">Delete</Button> -->
+            <!-- <mat-icon class="icons" id="documentButtonClicked" (click)="addDocument()">add</mat-icon> -->
+            <!-- <mat-icon class="icons" (click)="deleteDocument()">delete</mat-icon> -->
+            <!-- </div><br> -->
+
+            <table class="pagination-table">
+                <tbody>
+                  <tr>
+                    <td><label for="name">Document Name:</label></td>
+                    <td><input type="text"  [(ngModel)]="documentTypeId" name="name"></td>
+                    <td><button class="docBtnAdd" id="documentButtonClicked" (click)="addDocument()">Add</button></td>
+                    <td><Button class="docBtnDel" (click)="deleteDocument()">Delete</Button></td>
+                </tr><br>
+                
+                  <tr>
+                    <td><label for="pageID">PageID: </label></td>
+                    <td><input type="number" [(ngModel)]="pageID" id="pageID" name="pageID"></td>
+                  </tr>
+                  
+                  <tr>
+                    <td><label for="startReg"> Start Regex: </label></td>
+                    <td><input type="text" [(ngModel)]="startReg" id="startReg" name="startReg"></td>
+                  </tr>
+              
+                  <tr>
+                    <td><label for="endReg"> End Regex: </label></td>
+                    <td><input type="text" [(ngModel)]="endReg" id="endReg" name="endReg"></td>
+                    <td><button class="pageBtnAdd" (click)="pageNation()">Add</button></td>
+                    <td><input type="number" [(ngModel)]="pageIndex" id="pageIndex1" name="pageIndex" placeholder="Enter Page index"></td>
+                    <td><button class="pageBtnDel" (click)="deletePage(pageIndex)">Delete</button></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
+              
+
+            <!-- <div class="flex-container"> -->
+                <!-- <div>
+                    <label for="pageID">PageID: </label><br><br>
+                    <label for="startReg"> Start Regex: </label><br><br>
+                    <label for="endReg"> End Regex: </label>
+                </div>
+                <div>
+                    <input type="number" [(ngModel)]="pageID" id="pageID" name="pageID" style="margin-top: 10px;"><br><br>
+                    <input type="text" [(ngModel)]="startReg" id="startReg" name="startReg"><br><br>
+                    <input type="text" [(ngModel)]="endReg" id="endReg" name="endReg"><br><br>
+                </div>
+                <div>3</div> -->
+              <!-- </div> -->
+            
+            <!-- <div id="pageNation"> -->
+                <!-- <label for="pageID">PageID: </label>
+                <input type="number" [(ngModel)]="pageID" id="pageID" name="pageID"><br>
+
+                <label for="startReg"> Start Regex: </label>
+                <input type="text" [(ngModel)]="startReg" id="startReg" name="startReg"><br> -->
+
+                <!-- <label for="endReg"> End Regex: </label>
+                <input type="text" [(ngModel)]="endReg" id="endReg" name="endReg"><br><br> -->
+
+                <!-- <button class="Button" mat-raised-button color="primary" (click)="pageNation()">Add Page</button> -->
+                <!-- <button class="pageBtnAdd" (click)="pageNation()" style="margin-right: 3px;">Add</button> -->
+
+                <!-- <input type="number" [(ngModel)]="pageIndex" id="pageIndex1" name="pageIndex" placeholder="Enter Page index"> -->
+                <!-- <button class="Button" mat-raised-button color="warn" (click)="deletePage(pageIndex)">Delete Page</button> -->
+                <!-- <button class="pageBtnDel" (click)="deletePage(pageIndex)" style="margin-left: 3px;">Delete</button> -->
+                <!-- <br><br> -->
+            <!-- </div> -->
+
+            <div *ngIf="isPageExist" style="border-top: 1px solid rgb(149, 146, 146); margin-top: 10px;">
+                <br>
+                <label for="selectPageIndex">Select Page:</label>
+                <!-- <input id="selectPageIndex" name="selectPageIndex" type="number" placeholder="Enter Page Index"><br><br> -->
+                <input id="selectPageIndex" name="selectPageIndex" type="number" [(ngModel)]="selectPageIndex" placeholder="Enter Page Index"><br><br>
+            </div>
+
+            <div *ngIf="isPageExist" class="field-container">                
+                <div class="fc">
+                    <label> Add Fields Details:</label><br>
+                    <label for="fieldName">Field Name:</label>
+                    <input [(ngModel)]="fieldName" type="text" id="fieldName" name="fieldName" >
+
+                    <select [(ngModel)]="paraType" id="paraType" name="paraType" style="margin: 3px; padding: 1px; border: ridge;">
+                        <option value="">Type</option>
+                        <option value="Text">Text</option>
+                        <option value="Number">Number</option>
+                        <option value="Date">Date</option>
+                        <option value="Table">Table</option>
+                        <option value="AllTable">All_Table</option>
+                        <option value="Boolean">Boolean</option>
+                    </select>
+
+                    <button class="fieldBtnAdd" type="button" (click)="addField()">Add</button>
+
+                    <pre  #typeMsg style="margin-top: 2px; padding-left: 2px; color: rgb(254, 30, 30);"></pre>
+                
+                </div>
+                
+
+                <div class="fc" *ngIf="isColumnTableVisible" style="border-left: solid 1px #ccc; padding-left: 11px;">
+                    <label> Add Column Details:</label><br>
+                    <label for="columnName">Column Name:</label>
+                    <input [(ngModel)]="columnName" type="text" id="columnName" name="columnName">
+
+                    <select [(ngModel)]="_paraType" id="_paraType" name="_paraType" style="margin: 3px; padding: 2px; border: ridge;">
+                        <option value="">Type</option>
+                        <option value="Text">Text</option>
+                        <option value="Number">Number</option>
+                        <option value="Date">Date</option>
+                        <!-- <option value="Table">Table</option>
+                        <option value="Boolean">Boolean</option> -->
+                    </select>
+
+                    <button class="colBtnAdd" (click)="addColumn()">Add</button>
+
+                    <pre  #_typeMsg style="margin-top: 2px; padding-left: 2px; color: rgb(254, 30, 30);"></pre>
+                </div>
+            </div><br>
+
+            
+            <div *ngIf="isPageExist" class="tables-container">
+                <div class="table-container">
+                    <!-- <h4>Page Index {{ i }}</h4> -->
+                    <table>
+                        <thead style="background-color:deepskyblue;">
+                            <tr>
+                                <th style="width: 50px;">Page</th>
+                                <th style="width: 150px;">Field Name</th>
+                                <th style="width: 40px;">Type</th>
+                                <th style="width: 40px;" colspan="2" >Action</th>
+                            </tr>
+                        </thead>
+                        <tbody *ngFor="let page of templateObject[0].Page; let i = index" class="page">
+                            <tr *ngFor="let field of page.Fields" class="field">
+                                <td>{{ i }}</td>
+                                <td>{{ field.FieldName }}</td>
+                                <td>{{ field.Type }}</td>
+                                <td>Edit</td>
+                                <td>Delete</td>
+                                
+                            </tr>
+                            <tr *ngFor="let table of page.Tables; let j = index" class="field">
+                                <!-- <tr *ngFor="let table of page.Tables; let i = index" class="field"></tr> -->
+                                <td>{{ i }}</td>
+                                <!-- <td (click)="toggleColumnTableVisibility()">{{ table.TableName }}</td> -->
+                                <td (click)="!table.TableName.endsWith('AllTable-') && toggleColumnTableVisibility(j)">{{ table.TableName}}</td>
+                                <!-- <td (click)="toggleColumnTableVisibility()">Table</td> -->
+                                <td (click)="!table.TableName.endsWith('AllTable-')&& toggleColumnTableVisibility(j)">Table</td>
+                                <td>Edit</td>
+                                <!-- <td><mat-icon>edit</mat-icon></td> -->
+                                <td>Delete</td>
+                            
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- <div class="table-container" *ngIf="clicked" *ngFor="let page of templateObject[0].Page[0].Tables; let i = index"> -->
+                <div class="table-container" *ngIf="isColumnTableVisible" style="border-left: solid 1px #ccc; padding-left: 11px;">  
+                    
+                    <table>
+                        <thead style="background-color:deepskyblue;">
+                            <tr>                           
+                                <th style="width: 150px;">Column Name</th>
+                                <th style="width: 40px;">Type</th>
+                                <th style="width: 40px;" colspan="2" >Action</th>
+                            </tr>
+                        </thead>
+                        <!-- <tbody *ngFor="let column of templateObject[0].Page[this.selectPageIndex].Tables[0].ExtractionParserType.PaserInput.ColumnConfiguration; let i = index" class="page"> -->
+                        <tbody *ngFor="let column of templateObject[0].Page[selectPageIndex].Tables[tableIndex].ExtractionParserType.PaserInput.ColumnConfiguration; let i = index" class="page">
+                                <tr class="column">                                    
+                            <tr class="column">                                
+                                <td>{{ column.ColumnName }}</td>
+                                <td>{{ column.Type }}</td>
+                                <td>Edit</td>
+                                <td>Delete</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </mat-card>
+    </div>
+
+    <div class="viewTemp">
+        <p style="text-align: center;"><b>View Template</b></p>
+        <!-- <h3 style="text-align: center;">View Template</h3> -->
+        <mat-card id="viewCard" class="scrollable-card">
+            <pre id="jsonOutput" #jsonOutput></pre>
+            <!-- <pre id="jsonOutput">{{ jsonOutput | json }}</pre> -->            
+        </mat-card>
+        <mat-icon class="view_icon" (click)="downloadData()">cloud_download</mat-icon>
+        <mat-icon class="view_icon" (click)="copyToClipboard()">file_copy</mat-icon>
+        <pre  #msg style="margin-top: 2px; padding-left: 2px; color: rgb(141, 138, 138);"></pre>
+    </div>
+</body>
+</html> 

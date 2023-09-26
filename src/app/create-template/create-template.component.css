@@ -1,0 +1,176 @@
+.container{
+    display: flex;
+    font-family: "Arial", sans-serif;
+    font-size: 14px;
+    
+    .icons{
+        margin-left: 5px;
+        margin-right: 5px;    
+    }
+}
+
+.templateForm{
+    flex: 1;
+    margin-top: 5px;
+    margin-left: 5px;   
+    
+    /* width: 70%;  */
+
+    .input-box{
+        width: 200px;
+        height: 15px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .pagination-table {
+        border-collapse: collapse;
+        border: none;
+        width: 60%;               
+      }
+
+    .pagination-table td {
+        border: none;
+        padding: 4px 2px; /* Spacing inside each cell */
+    }
+
+    .input-container{
+        z-index: 1;
+        margin-right: 5px;
+        padding: 10px;
+        display: flex;
+        /* background-color: #fcfcfc; */
+        /* flex-direction:column; */
+    }
+
+    .tables-container {
+        display: flex;
+        justify-content: space-between;
+         
+    }
+    .table-container {
+        width: 50%; 
+        overflow-x: auto;
+    }
+
+    .field-container {
+        display: flex;
+        justify-content: space-between;
+    }
+    .fc {
+        width: 50%; 
+        overflow-x: auto;
+    }
+
+    
+
+}
+
+
+
+.viewTemp{
+    min-height: 50px;
+    z-index: 2;
+    flex: .5;
+    padding-right: 5px;
+    /* padding: 5px; */
+    /* float: right; */
+    /* width: 300px; */
+    /* background-color: aqua; */
+
+    .view_icon{
+        padding: 5px;
+        float: right;
+        font-size: 20px;
+    }
+}
+
+.scrollable-card{
+    max-height: 430px; 
+    overflow-y: auto; /* this will enable vertical scrolling when the content is larger than the max-height */
+    padding: 15px;
+    box-sizing: border-box;
+    width: 420px; 
+    overflow-x: auto;
+}
+
+.Button{
+    width: 20%;
+    height: 25px;
+    margin-left: 2px;
+    margin-right: 2px;
+    
+}
+
+.docBtnAdd:hover, .pageBtnAdd:hover, .fieldBtnAdd:hover, .colBtnAdd:hover{
+    background-color: rgba(1, 111, 246, 0.831);
+    border: none;
+    padding: 3px 8px;
+    color: aliceblue;
+}
+
+/* .docBtnDel, .pageBtnDel{
+    margin: 5px;
+} */
+
+.docBtnDel:hover, .pageBtnDel:hover{
+    background-color: #ff0606;
+    border: none;
+    padding: 3px 8px;
+    color: aliceblue;
+}
+
+
+
+/* .fieldBtnAdd:hover{
+    background-color: rgba(1, 111, 246, 0.831);
+    border: none;
+    padding: 3px 8px;
+    color: aliceblue;
+} */
+
+
+.fields-grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.field {
+    flex: 0 0 calc(33.3333% - 10px); /* creates a 3-column layout */
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+table {
+    /* width: 50%; */
+    border-collapse: collapse;  /* collapse borders into a single line */
+}
+
+table, th, td {
+    border: 1px solid black;  /* apply border to table and cells */
+}
+
+th, td {
+    padding: 5px;  /* add padding to cells */
+    text-align: left;  /* align text to the left */
+}
+
+
+
+/* input box styling  */
+input[type="number"] {
+    width: 50px;
+    padding: 1.5px;
+}
+
+input {
+    border: ridge;
+}
+
+
+
+
+
+  
+  

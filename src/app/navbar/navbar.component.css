@@ -1,0 +1,17 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+.navbar{
+    /* z-index: 100; */
+    background-color: black;
+    font-size: 15px;
+    /* height: 45px; */
+    height: 50%;
+    /* position: fixed; */
+    
+}
+
+.custom-icon {
+    font-size: 20px; 
+}

@@ -1,0 +1,44 @@
+/* .example-spacer {
+    flex: 1 1 auto;
+  }
+
+.navbar{
+    z-index: 1;
+    background-color: black;
+    font-size: 15px;
+    height: 50%;
+}
+
+.custom-icon {
+    font-size: 20px; 
+} */
+
+#tempMatCard{
+    margin-top: 60px;
+    margin-left: 20px;
+    width: 300px; /* Adjust the width as needed */
+    height: 200px; /* Adjust the height as needed */
+    padding: 16px; /* Adjust the padding inside the card */
+    background-color: #b0e2ff;
+}
+
+#cardImg{
+  
+  width: 100px; /* Adjust the width as needed */
+  height: 150px; /* Adjust the height as needed */
+  /* padding: 5px; Adjust the padding inside the card */
+  margin-left: 70px;
+
+}
+
+#regexEditormatCard{
+  margin-top: 60px;
+  margin-left: 20px;
+  width: 300px; /* Adjust the width as needed */
+  height: 200px; /* Adjust the height as needed */
+  padding: 16px; /* Adjust the padding inside the card */
+  background-color: #b0e2ff;
+}
+
+
+
