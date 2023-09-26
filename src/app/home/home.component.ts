@@ -10,11 +10,15 @@ export class HomeComponent {
 
   constructor(private router: Router) {}
 
-  
+  url: string='';
 
   onJSONimageClick() {
     // alert("image clicked")
     this.router.navigate(['/create-template']);
+  }
+
+  goToLink(url: string){
+    window.open(url, "_blank");
   }
 
 }
