@@ -27,7 +27,7 @@
     <mat-card class="example-card" id="tempMatCard" >
         <mat-card-header>
           <div mat-card-avatar class="example-header-image"></div>
-          <mat-card-title allign="center">Create JTemplate</mat-card-title>
+          <mat-card-title allign="center">Create Template</mat-card-title>
           <mat-card-subtitle allign="center">Create a JSON Template for TemplateExtraction</mat-card-subtitle>
         </mat-card-header>
         <img mat-card-image id="cardImg" src="https://img.freepik.com/premium-vector/modern-flat-design-json-file-icon-web-simple-style_599062-468.jpg?w=740" alt="Click to create a template" (click)="onJSONimageClick()">
@@ -51,16 +51,20 @@
       </mat-card-actions>
   </mat-card>
 
-  <mat-card  id="regexEditormatCard">
-    <mat-card-header>
-      <div mat-card-avatar class="example-header-image"></div>
-      <mat-card-title allign="center">Empty Card</mat-card-title>
-      <!-- <mat-card-subtitle allign="center">Create a JSON Template </mat-card-subtitle> -->
-    </mat-card-header>
-    <!-- <img mat-card-image id="cardImg" src="https://img.freepik.com/premium-vector/modern-flat-design-json-file-icon-web-simple-style_599062-468.jpg?w=740" alt="Click to create a template" (click)="onJSONimageClick()"> -->
+  <mat-card  id="regexEditormatCard" >
+    
+    <mat-card-title class="comparatorCard">Text Comparator</mat-card-title>
+
     <mat-card-content>
+      <p>To compare targeted text with baseline text</p>
     </mat-card-content>
-    <mat-card-actions>
+    
+    <!-- <mat-card-content>
+      <a (click)='goToLink("https://text-comparator.web.app/")'>Text Comparator</a>
+    </mat-card-content> -->
+
+    <mat-card-actions class="comparatorCard">
+      <a  href="https://text-comparator.web.app/">Text Comparator</a>
     </mat-card-actions>
 </mat-card>
 </div>
