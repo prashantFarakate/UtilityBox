@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
-<body class="main">  
+
+<body class="main">
 
   <!-- <app-home></app-home> -->
-    <!-- <mat-toolbar class="navbar" color="primary">
+  <!-- <mat-toolbar class="navbar" color="primary">
         
         <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
         <mat-icon class="custom-icon">menu</mat-icon>
@@ -23,62 +25,48 @@
         <mat-icon class="custom-icon">share</mat-icon>
         </button>
     </mat-toolbar> -->
-    <div fxLayout="row">
-    <mat-card class="example-card" id="tempMatCard" >
-        <mat-card-header>
-          <div mat-card-avatar class="example-header-image"></div>
-          <mat-card-title allign="center">Create Template</mat-card-title>
-          <mat-card-subtitle allign="center">Create a JSON Template for TemplateExtraction</mat-card-subtitle>
-        </mat-card-header>
-        <img mat-card-image id="cardImg" src="https://img.freepik.com/premium-vector/modern-flat-design-json-file-icon-web-simple-style_599062-468.jpg?w=740" alt="Click to create a template" (click)="onJSONimageClick()">
-        <mat-card-content>
-        </mat-card-content>
-        <mat-card-actions>
-        </mat-card-actions>
-    </mat-card>
 
-    <mat-card  id="regexEditormatCard">
+  <div fxLayout="row">
+    <mat-card class="example-card" id="tempMatCard" (click)="createTemplate()">
       <mat-card-header>
-        <div mat-card-avatar class="example-header-image"></div>
-        <mat-card-title allign="center">RegEx Editor</mat-card-title>
-        <!-- <mat-card-subtitle allign="center">Regex playground to filter the string by giving Regex query</mat-card-subtitle> -->
+        <!-- <div mat-card-avatar class="example-header-image"></div> -->
+        <mat-card-title allign="center">Create Template</mat-card-title>
+        <!-- <mat-card-subtitle allign="center">Create a JSON Template for TemplateExtraction</mat-card-subtitle> -->
       </mat-card-header>
+      <mat-divider></mat-divider>
       <!-- <img mat-card-image id="cardImg" src="https://img.freepik.com/premium-vector/modern-flat-design-json-file-icon-web-simple-style_599062-468.jpg?w=740" alt="Click to create a template" (click)="onJSONimageClick()"> -->
       <mat-card-content>
-        <p>Regex playground to filter the string by giving Regex query</p>
+        <p>Create a JSON Template for TemplateExtraction endpoint</p>
       </mat-card-content>
       <mat-card-actions>
       </mat-card-actions>
-  </mat-card>
+    </mat-card>
 
-  <mat-card  id="regexEditormatCard" >
-    
-    <mat-card-title class="comparatorCard">Text Comparator</mat-card-title>
+    <mat-card id="regexEditormatCard">
+      <mat-card-header>
+        <mat-card-title allign="center">RegEx Editor</mat-card-title>
+      </mat-card-header>
+      <mat-divider></mat-divider>
+      <mat-card-content>
+        <p>Regex playground to filter the string by giving Regex query</p>
+      </mat-card-content>
+    </mat-card>
 
-    <mat-card-content>
-      <p>To compare targeted text with baseline text</p>
-    </mat-card-content>
-    
-    <!-- <mat-card-content>
-      <a (click)='goToLink("https://text-comparator.web.app/")'>Text Comparator</a>
-    </mat-card-content> -->
 
-    <mat-card-actions class="comparatorCard">
-      <a  href="https://text-comparator.web.app/">Text Comparator</a>
-    </mat-card-actions>
-</mat-card>
-</div>
-    
-      
+    <mat-card id="comparatorCard" (click)="goToComparator()">
+      <mat-card-header>
+        <mat-card-title>Text Comparator</mat-card-title>
+      </mat-card-header>
+      <mat-divider></mat-divider>
+      <mat-card-content>
+        <p>To compare targeted text with baseline text</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <!-- <a href="https://text-comparator.web.app/">Text Comparator</a> -->
+      </mat-card-actions>
+    </mat-card>
+  </div>
+
 </body>
+
 </html>
-
-
-
-
-
-
-
-
-
-

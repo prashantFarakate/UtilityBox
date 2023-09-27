@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -10,15 +11,13 @@ export class HomeComponent {
 
   constructor(private router: Router) {}
 
-  url: string='';
-
-  onJSONimageClick() {
+  createTemplate() {
     // alert("image clicked")
     this.router.navigate(['/create-template']);
   }
 
-  goToLink(url: string){
-    window.open(url, "_blank");
+  goToComparator(){
+    window.open("https://text-comparator.web.app/", "_self");
   }
 
 }

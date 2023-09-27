@@ -16,6 +16,7 @@ import { RoiComponent } from './create-template/roi/roi.component';
 
 import {MatDialogModule} from '@angular/material/dialog';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import {MatDividerModule} from '@angular/material/divider';
 
 // import { BrowserModule } from '@angular/platform-browser';
 // import { NgModule } from '@angular/core';
@@ -45,8 +46,10 @@ import { ReComponent } from './create-template/re/re.component';
     FormsModule,
     MatDialogModule,
     FlexLayoutModule,
+    MatDividerModule,
     
     PdfViewerModule
+
     
   ],
   providers: [],

@@ -13,13 +13,16 @@
     font-size: 20px; 
 } */
 
-#tempMatCard{
+#tempMatCard, #regexEditormatCard , #comparatorCard{
     margin-top: 60px;
     margin-left: 20px;
-    width: 300px; /* Adjust the width as needed */
-    height: 200px; /* Adjust the height as needed */
-    padding: 16px; /* Adjust the padding inside the card */
-    background-color: #b0e2ff;
+    width: 300px; 
+    height: 200px; 
+    padding: 16px; 
+
+    border-radius: 12px;
+    border: 1px solid var(--colorNeutralBackground5);
+    background-color: #ffffff;
 }
 
 #cardImg{
@@ -31,19 +34,12 @@
 
 }
 
-#regexEditormatCard{
-  margin-top: 60px;
-  margin-left: 20px;
-  width: 300px; /* Adjust the width as needed */
-  height: 200px; /* Adjust the height as needed */
-  padding: 16px; /* Adjust the padding inside the card */
-  background-color: #b0e2ff;
-}
 
 
+/* 
 
 .comparatorCard{
   margin-top: 20px;
   margin-left: 50px;
   font-size: 20px ;
-}
+} */
