@@ -1,12 +1,12 @@
 .container{
     display: flex;
     font-family: "Arial", sans-serif;
-    font-size: 14px;
-    
-    .icons{
-        margin-left: 5px;
-        margin-right: 5px;    
-    }
+    font-size: 14px;  
+}
+
+.icons{
+    margin-left: 5px;
+    margin-right: 5px;    
 }
 
 .templateForm{
@@ -16,12 +16,7 @@
     
     /* width: 70%;  */
 
-    .input-box{
-        width: 200px;
-        height: 15px;
-        margin-left: 5px;
-        margin-right: 5px;
-    }
+}
 
     .pagination-table {
         border-collapse: collapse;
@@ -64,8 +59,14 @@
 
     
 
-}
 
+
+.input-box{
+    width: 200px;
+    height: 15px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
 
 
 .viewTemp{

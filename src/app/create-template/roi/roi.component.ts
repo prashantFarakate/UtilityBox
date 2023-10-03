@@ -3,8 +3,8 @@ import { MatDialogRef } from '@angular/material/dialog';
 import { Component, ViewChild, ElementRef, asNativeElements, OnInit } from '@angular/core';
 import { JsonDataService } from '../json-data.service';
 // import * as pdfjs from 'pdfjs-dist/webpack';
-import * as pdfjs from 'pdfjs-dist';
-import { EMPTY } from 'diffhtml/dist/typings/util/types';
+// import * as pdfjs from 'pdfjs-dist';
+// import { EMPTY } from 'diffhtml/dist/typings/util/types';
 // pdfjs.GlobalWorkerOptions.workerSrc = '/path/to/pdf.worker.js';
 
 
