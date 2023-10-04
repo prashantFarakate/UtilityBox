@@ -23,7 +23,24 @@
     border-radius: 12px;
     border: 1px solid var(--colorNeutralBackground5);
     background-color: #ffffff;
+    
+    transition: transform 0.3s;
+
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
+
+#tempMatCard:hover, #regexEditormatCard:hover , #comparatorCard:hover {
+  transform: scale(1.05); /* Zoom in a card */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  /* background-color: #b3dbf3; */
+  /* background-color: rgba(85, 157, 246, 0.831); */
+  background-color: black;
+  color: white;
+}
+
+
+
 
 #cardImg{
   
