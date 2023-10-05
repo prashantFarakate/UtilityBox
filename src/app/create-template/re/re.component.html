@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RE</title>
 </head>
+
 <body class="reWizard">
     <div fxLayout="column">
         <div class="ribbon" style="background-color:  #ccc; height: 30px;">
             <!-- <span>RE</span> -->
-            <button style="background-color: red; color: aliceblue;  border: none;margin: 0px 0px; height: 30px; float: right;" (click)="close()">Close</button>
-            <button style="background-color: rgba(1, 111, 246, 0.831); color: aliceblue; margin: 0px 0px 0px 0px; border: none; height: 30px; float: right;" (click)="save()">Save</button>
+            <button
+                style="background-color: red; color: aliceblue;  border: none;margin: 0px 0px; height: 30px; float: right;"
+                (click)="close()">Close</button>
+            <button
+                style="background-color: rgba(1, 111, 246, 0.831); color: aliceblue; margin: 0px 0px 0px 0px; border: none; height: 30px; float: right;"
+                (click)="save()">Save</button>
         </div>
 
-        
+
         <!-- <div fxLayout="row" div *ngFor="let label of labels; let i = index" >
             <div fxFlex="25">
                 <label >{{ label }}</label>
@@ -23,8 +29,8 @@
                 <input type="text">
             </div>
         </div><br> -->
-        
-        
+
+
 
         <!-- <div *ngFor="let label of labels; let i = index">
             <label>{{ label }}</label>
@@ -33,7 +39,7 @@
         </div><br> -->
 
         <!-- <input *ngIf(!label="TableName")> -->
-            <!-- <input [ngModel]="inputValues[i]"
+        <!-- <input [ngModel]="inputValues[i]"
                    (ngModelChange)="inputValues[i] = $event" 
                    (click)="setSelectedInput(i)"
                    type="text" [id]="'input' + i" [name]="'input' + i"> -->
@@ -48,13 +54,12 @@
             <tbody>
                 <tr *ngFor="let label of labels; let i = index" style="border: black 1px solid;">
                     <td><label>{{ label }}</label></td>
-                   
-                 
+
+
                     <td>
-                        <input [ngModel]="inputValues[i]"
-                            (ngModelChange)="inputValues[i] = $event" 
-                            (click)="setSelectedInput(i)"
-                            type="text" [id]="'input' + i" [name]="'input' + i" style="width: 400px;">
+                        <input [ngModel]="inputValues[i]" (ngModelChange)="inputValues[i] = $event"
+                            (click)="setSelectedInput(i)" type="text" [id]="'input' + i" [name]="'input' + i"
+                            style="width: 400px;">
                     </td>
 
 
@@ -67,8 +72,9 @@
 
         </table>
         <br>
-       
+
 
     </div>
 </body>
+
 </html>

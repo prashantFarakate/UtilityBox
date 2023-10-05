@@ -16,10 +16,12 @@
 .work-area {
     background-color: #f9f9f9;
     padding: 16px;
-    overflow: auto; /* Hide overflow content */
-    position: relative; /* Set as reference for the absolute positioning of the image */
-    height: 100%; 
-    
+    overflow: auto;
+    /* Hide overflow content */
+    position: relative;
+    /* Set as reference for the absolute positioning of the image */
+    height: 100%;
+
 }
 
 .work-area canvas {
@@ -29,26 +31,33 @@
     /* max-height: 100%; */
 
     /* width: 1000px; */
-    /* height: 600px; */ 
-    position: absolute; /* Position the image within the work-area */
+    /* height: 600px; */
+    position: absolute;
+    /* Position the image within the work-area */
     top: 0;
     /* left: 0; */
     /* left: 50%; */
-    transform-origin: 0% 0%; 
+    transform-origin: 0% 0%;
     /* Zoom from the center */
+    width: 100%;
 }
 
 .work-area::-webkit-scrollbar {
-    width: 5px; /* Width of vertical scrollbar */
-    height: 5px; /* Height for horizontal scrollbar */
-    background-color: #F5F5F5; /* Color of the scrollbar track */   
+    width: 5px;
+    /* Width of vertical scrollbar */
+    height: 5px;
+    /* Height for horizontal scrollbar */
+    background-color: #F5F5F5;
+    /* Color of the scrollbar track */
 }
 
 .work-area::-webkit-scrollbar-thumb {
     /* Color of the scroll thumb */
     background-color: hsl(207, 95%, 50%);
-    border-radius: 5px; /* Rounded corners */
-    border: 2px solid #F5F5F5; /* Add border matching with the track */
+    border-radius: 5px;
+    /* Rounded corners */
+    border: 2px solid #F5F5F5;
+    /* Add border matching with the track */
 }
 
 .right-panel {
@@ -63,6 +72,3 @@
     position: absolute;
     pointer-events: none;
 } */
-
-
-

@@ -56,9 +56,10 @@ export class ReComponent {
     this.inputValues.forEach((value, i) => {
       this.jsonDataService.saveInputData(i, value);
     });
-        
-    this.inputValues.forEach((value, index) => {
+    
+    console.log("this.jsonDataService",this.jsonDataService)
 
+    this.inputValues.forEach((value, index) => {
       if (this.regEx[index]) {
         this.regEx[index] = value;
       } else {
