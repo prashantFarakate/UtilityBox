@@ -39,7 +39,7 @@
     /* left: 50%; */
     transform-origin: 0% 0%;
     /* Zoom from the center */
-    width: 100%;
+    /* width: 100%; */
 }
 
 .work-area::-webkit-scrollbar {
